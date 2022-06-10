@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/raleway/raleway-800.woff2") format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/rubik/rubik-400.woff2") format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/rubik/rubik-700.woff2") format(woff2);
+  font-display: swap;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background-color: #ffff;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.navigation-item:first-child input {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.search-button {
+  text-align: center;
+}
+
+.navigation-link-info {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+}
+
+.front-item__header {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.sale-details {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
+.sale-details h3 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.sale-details__navigation-list {
+  list-style-type: none;
+}
+
+.front-item__parametrs span:first-child {
+  font-size: 36px;
+}
+
+.front-item__parametrs span:last-child {
+  font-size: 16px;
+}
+
+.products-list {
+  list-style-type: none;
+}
+
+.products-list li {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.add-info__text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.about h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.about-companies-list {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.crossed-button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.contacts h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.contacts-address-text {
+  font-style: normal;
+}
+
+.contacts-phone {
+  color: #000000;
+}
+
+.subscription-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.subscription-submit-button {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer-address {
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+}

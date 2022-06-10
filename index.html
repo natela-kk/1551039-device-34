@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
       <ul class="navigation-list navigation-list-user">
         <li class="navigation-item">
           <input type="search" placeholder="Текст поиска">
-          <input type="button" value="Найти">
+          <input class="search-button" type="button" value="Найти">
         </li>
         <li class="navigation-item">
           <a class="navigation-link">Войти</a>
@@ -27,16 +28,16 @@
       </ul>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <button class="navigation-link" type="button">Каталог товаров</button>
+          <button class="button navigation-link navigation-link-info" type="button">Каталог товаров</button>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link">Доставка</a>
+          <a class="navigation-link navigation-link-info">Доставка</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link">Гарантия</a>
+          <a class="navigation-link navigation-link-info">Гарантия</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link">Контакты</a>
+          <a class="navigation-link navigation-link-info">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -59,7 +60,7 @@
         <p class="front-item__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
           под стандартную камеру.
         </p>
-        <a class="button item-details-button" href="#">Подробнее</a>
+        <a class="button crossed-button item-details-button" href="#">Подробнее</a>
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button slider-pagination-button-current" type="button">
@@ -92,29 +93,23 @@
       <h2 class="visually-hidden">Группы товаров</h2>
       <ul class="products-list">
         <li class="products-item">
-          <img class="products-image" src="" alt="Описание">
           <span class="products-caption">Виртуальная
             реальность</span>
         </li>
         <li class="products-item">
-          <img class="products-image" src="" alt="Описание">
           <span class="products-caption">Моноподы
             для селфи</span>
         </li>
         <li class="products-item">
-          <img class="products-image" src="" alt="Описание">
           <span class="products-caption">Экшн-камеры</span>
         </li>
         <li class="products-item">
-          <img class="products-image" src="" alt="Описание">
           <span class="products-caption">Фитнес-браслеты</span>
         </li>
         <li class="products-item">
-          <img class="products-image" src="" alt="Описание">
           <span class="products-caption">Умные часы</span>
         </li>
         <li class="products-item">
-          <img class="products-image" src="" alt="Описание">
           <span class="products-caption">Квадрокоптеры</span>
         </li>
       </ul>
@@ -124,25 +119,22 @@
       <h2 class="visually-hidden">Детали продажи</h2>
       <nav class="sale-details__navigation">
         <ul class="sale-details__navigation-list">
-          <li class="sale-details__navigation-item">Доставка</li>
-          <li class="sale-details__navigation-item">Гарантия</li>
-          <li class="sale-details__navigation-item">Кредит</li>
+          <li class="crossed-button sale-details__navigation-item">Доставка</li>
+          <li class="crossed-button sale-details__navigation-item">Гарантия</li>
+          <li class="crossed-button sale-details__navigation-item">Кредит</li>
         </ul>
       </nav>
       <div class="sale-details__description">
         <h3 class="sale-details__header">Доставка</h3>
         <p class="sale-details__text"></p>
-        <img class="sale-details__image" src="#" alt="Описание">
       </div>
       <div class="sale-details__description">
         <h3 class="sale-details__description-header">Гарантия</h3>
         <p class="sale-details__description-text"></p>
-        <img class="sale-details__image" src="#" alt="Описание">
       </div>
       <div class="sale-details__description">
         <h3 class="sale-details__description-header">Кредит</h3>
         <p class="sale-details__description-text"></p>
-        <img class="sale-details__image" src="#" alt="Описание">
       </div>
     </section>
 
@@ -162,7 +154,7 @@
         <li class="about-companies-item">СДИК</li>
         <li class="about-companies-item">ТоксБерри</li>
       </ul>
-      <a class="button about-details-button" href="#">Подробнее о нас</a>
+      <a class="button crossed-button about-details-button" href="#">Подробнее о нас</a>
     </section>
 
     <section class="contacts">
@@ -177,7 +169,7 @@
         <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
         <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
       </ul>
-      <a class="button contacts-text-button" href="#">Напишите нам</a>
+      <a class="button crossed-button contacts-text-button" href="#">Напишите нам</a>
     </section>
 
     <section class="subscription">
