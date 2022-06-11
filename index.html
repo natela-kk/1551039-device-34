@@ -128,18 +128,17 @@
         <h3 class="sale-details__header">Доставка</h3>
         <p class="sale-details__text"></p>
       </div>
-      <div class="sale-details__description">
-        <h3 class="sale-details__description-header">Гарантия</h3>
+      <div class="sale-details__description visually-hidden">
+        <h3 class="sale-details__description-header ">Гарантия</h3>
         <p class="sale-details__description-text"></p>
       </div>
-      <div class="sale-details__description">
+      <div class="sale-details__description visually-hidden">
         <h3 class="sale-details__description-header">Кредит</h3>
         <p class="sale-details__description-text"></p>
       </div>
     </section>
 
     <div class="add-info">
-      <img class="add-info__image" src="#" alt=" Описание">
       <p class="add-info__text">Доставим редкий товар под заказ</p>
     </div>
 
@@ -178,9 +177,11 @@
       <p class="subscription-description">Еженедельный дайджест с обзорами новинок,
         длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
       <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="subscription-email">Email</label>
-        <input class="subscription-email-input" type="email" name="subscription-email" id="subscription-email"
+        <label class="subscription-email">
+        <input class="subscription-email-input" type="email" name="subscription-email"
           placeholder="Ваш e-mail">
+         <span class="visually-hidden"> Email </span>
+        </label>
         <button class="button subscription-submit-button" type="submit">Подписаться</button>
       </form>
       <p class="subscription__add-info">Это бесплатно</p>
@@ -195,7 +196,7 @@
       <li class="footer-info-item">Гарантия</li>
       <li class="footer-info-item">Контакты</li>
     </ul>
-    <a class="contacts-phone" href="tel:+78128121212">Тел +7 (812) 812-12-12</a>
+    <a class="footer-contacts-phone" href="tel:+78128121212">Тел +7 (812) 812-12-12</a>
     <ul class="footer-social-list">
       <li class="footer-social-item">
         <a class="social-link" href="">

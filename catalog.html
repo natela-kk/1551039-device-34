@@ -4,18 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
   <header class="page-header">
-    <a class="logo-link" href="/index.html">
     <img class="logo" src="/images/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Device">
-    </a>
     <nav class="navigation">
       <ul class="navigation-list navigation-list-user">
         <li class="navigation-item">
           <input type="search" placeholder="Текст поиска">
-          <input type="button" value="Найти">
+          <input class="search-button" type="button" value="Найти">
         </li>
         <li class="navigation-item">
           <a class="navigation-link">Войти</a>
@@ -29,16 +28,16 @@
       </ul>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <button class="navigation-link" type="button">Каталог товаров</button>
+          <button class="button navigation-link navigation-link-info" type="button">Каталог товаров</button>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link">Доставка</a>
+          <a class="navigation-link navigation-link-info">Доставка</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link">Гарантия</a>
+          <a class="navigation-link navigation-link-info">Гарантия</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link">Контакты</a>
+          <a class="navigation-link navigation-link-info">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -62,7 +61,7 @@
     </header>
 
     <section class="catalog-filters">
-      <h3 class="visually-hidden">фильтр:</h3>
+      <h3>фильтр:</h3>
       <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Цвет</legend>
@@ -103,7 +102,7 @@
     </section>
 
     <section class="catalog-sort">
-      <h3 class="visually-hidden">сортировка:</h3>
+      <h3>сортировка:</h3>
       <select class="select-control">
         <option value="popular">Популярные</option>
       </select>
@@ -152,7 +151,7 @@
       <button class="button load-more-button">Загрузить ещё</button>
       <ul class="pagination">
         <li class="pagination-item">
-          <a class="pagination-link">Назад</a>
+          <a class="pagination-link-control">Назад</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link">1</a>
@@ -200,7 +199,7 @@
           <a class="pagination-link">15</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link">Вперёд</a>
+          <a class="pagination-link-control">Вперёд</a>
         </li>
       </ul>
     </section>
@@ -215,7 +214,7 @@
       <li class="footer-info-item">Гарантия</li>
       <li class="footer-info-item">Контакты</li>
     </ul>
-    <a class="contacts-phone" href="tel:+78128121212">Тел +7 (812) 812-12-12</a>
+    <a class="footer-contacts-phone" href="tel:+78128121212">Тел +7 (812) 812-12-12</a>
     <ul class="footer-social-list">
       <li class="footer-social-item">
         <a class="social-link" href="">
