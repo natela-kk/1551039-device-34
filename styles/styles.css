@@ -43,7 +43,7 @@ body {
   color: #ffff;
 }
 
-.navigation-item:first-child input {
+.navigation-item-input {
   font-size: 16px;
   line-height: 20px;
 }
@@ -94,11 +94,11 @@ body {
   list-style-type: none;
 }
 
-.front-item__parametrs span:first-child {
+.front-item__parametrs-number {
   font-size: 36px;
 }
 
-.front-item__parametrs span:last-child {
+.front-item__parametrs-text {
   font-size: 16px;
 }
 
@@ -293,13 +293,13 @@ body {
 }
 
 .sale-details {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .add-info {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .subscription {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }

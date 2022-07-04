@@ -13,8 +13,8 @@
     <nav class="navigation">
       <ul class="navigation-list navigation-list-user">
         <li class="navigation-item">
-          <input type="search" placeholder="Текст поиска">
-          <input class="search-button" type="button" value="Найти">
+          <input class="navigation-item-input" type="search" placeholder="Текст поиска">
+          <input class="search-button  navigation-item-input" type="button" value="Найти">
         </li>
         <li class="navigation-item">
           <a class="navigation-link">Войти</a>
@@ -79,12 +79,12 @@
           </li>
         </ol>
         <div class="front-item__parametrs">
-          <span>800 м</span>
-          <span>Дальность полета</span>
+          <span class="front-item__parametrs-number">800 м</span>
+          <span class="front-item__parametrs-text">Дальность полета</span>
         </div>
         <div class="front-item__parametrs">
-          <span>50 м</span>
-          <span>Радиус поражения</span>
+          <span class="front-item__parametrs-number">50 м</span>
+          <span class="front-item__parametrs-text">Радиус поражения</span>
         </div>
       </div>
     </section>
@@ -178,8 +178,7 @@
         длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
       <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="subscription-email">
-        <input class="subscription-email-input" type="email" name="subscription-email"
-          placeholder="Ваш e-mail">
+        <input class="subscription-email-input" type="email" name="subscription-email" placeholder="Ваш e-mail">
          <span class="visually-hidden"> Email </span>
         </label>
         <button class="button subscription-submit-button" type="submit">Подписаться</button>
