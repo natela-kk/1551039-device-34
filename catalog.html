@@ -26,20 +26,21 @@
             <a class="navigation-link">Корзина</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-details">
-          <li class="navigation-item navigation-item-catalog">
-            <button class="button navigation-link navigation-link-info" type="button">Каталог товаров</button>
-          </li>
-          <li class="navigation-item navigation-item-info">
-            <a class="navigation-link navigation-link-info">Доставка</a>
-          </li>
-          <li class="navigation-item navigation-item-info">
-            <a class="navigation-link navigation-link-info">Гарантия</a>
-          </li>
-          <li class="navigation-item navigation-item-info">
-            <a class="navigation-link navigation-link-info">Контакты</a>
-          </li>
-        </ul>
+        <div class="navigation-sub">
+          <button class="button navigation-link navigation-link-info navigation-catalog" type="button">Каталог
+            товаров</button>
+          <ul class="navigation-details">
+            <li class="navigation-item navigation-item-info">
+              <a class="navigation-link navigation-link-info">Доставка</a>
+            </li>
+            <li class="navigation-item navigation-item-info">
+              <a class="navigation-link navigation-link-info">Гарантия</a>
+            </li>
+            <li class="navigation-item navigation-item-info">
+              <a class="navigation-link navigation-link-info">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -155,60 +156,27 @@
               </ul>
               <button class="button load-more-button">Загрузить ещё</button>
               <div class="pagination">
-                <a class="pagination-link-control">Назад</a>
-              <ul class="pagination-numbers">
-                <li class="pagination-item">
-                  <a class="pagination-link">1</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link">2</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link">3</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">4</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">5</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">6</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">7</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">8</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">9</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">10</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">11</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">12</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">13</a>
-                </li>
-                <li class="pagination-item visually-hidden">
-                  <a class="pagination-link" href="#">14</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link pagination-next" href="#">
-                    ...
-                  </a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link">15</a>
-                </li>
-              </ul>
-              <a class="pagination-link-control">Вперёд</a>
+                <a class="pagination-link-control pagination-prev pagination-disabled">Назад</a>
+                <ul class="pagination-numbers">
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-link-current">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-next" href="#">
+                      ...
+                    </a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link">15</a>
+                  </li>
+                </ul>
+                <a class="pagination-link-control  pagination-next">Вперёд</a>
               </div>
             </section>
           </div>
@@ -219,35 +187,36 @@
 
     <footer class="page-footer">
       <div class="page-footer-container">
-        <img class="footer-logo" src="/images/footer-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс»">
-      <div class="footer-info">
-      <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-      <ul class="footer-info-list">
-        <li class="footer-info-item">Доставка</li>
-        <li class="footer-info-item">Гарантия</li>
-        <li class="footer-info-item">Контакты</li>
-      </ul>
-      <a class="footer-contacts-phone" href="tel:+78128121212">Тел +7 (812) 812-12-12</a>
-      </div>
-      <div class="footer-social">
-      <ul class="footer-social-list">
-        <li class="footer-social-item">
-          <a class="social-link" href="">
-            <span class="visually-hidden">Телеграм</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a class="social-link" href="#">
-            <span class="visually-hidden">Ютуб</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a class="social-link" href="#">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
-        </li>
-      </ul>
-      </div>
+        <img class="footer-logo" src="/images/footer-logo.svg" width="145" height="36"
+          alt="Логотип интернет-магазина «Девайс»">
+        <div class="footer-info">
+          <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
+          <ul class="footer-info-list">
+            <li class="footer-info-item">Доставка</li>
+            <li class="footer-info-item">Гарантия</li>
+            <li class="footer-info-item">Контакты</li>
+          </ul>
+          <a class="footer-contacts-phone" href="tel:+78128121212">Тел +7 (812) 812-12-12</a>
+        </div>
+        <div class="footer-social">
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="social-link" href="">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-link" href="#">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-link" href="#">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
