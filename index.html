@@ -26,10 +26,9 @@
           <a class="navigation-link">Корзина</a>
         </li>
       </ul>
-      <ul class="navigation-list navigation-details">
-        <li class="navigation-item navigation-item-catalog">
-          <button class="button navigation-link navigation-link-info" type="button">Каталог товаров</button>
-        </li>
+      <div class="navigation-sub">
+        <button class="button navigation-link navigation-link-info navigation-catalog" type="button">Каталог товаров</button>
+      <ul class="navigation-details">
         <li class="navigation-item navigation-item-info">
           <a class="navigation-link navigation-link-info">Доставка</a>
         </li>
@@ -40,6 +39,7 @@
           <a class="navigation-link navigation-link-info">Контакты</a>
         </li>
       </ul>
+    </div>
     </nav>
   </header>
 
@@ -62,8 +62,8 @@
         <p class="front-item__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
           под стандартную камеру.
         </p>
-        <a class="button crossed-button item-details-button" href="#">Подробнее</a>
-        <ol class="slider-pagination">
+        <a class="button crossed-button front-item-details-button" href="#">Подробнее</a>
+        <ol class="slider-pagination visually-hidden">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button slider-pagination-button-current" type="button">
               <span class="visually-hidden">1 фото</span>
@@ -80,6 +80,7 @@
             </button>
           </li>
         </ol>
+        <div class="front-item__parametrs-list">
         <div class="front-item__parametrs">
           <span class="front-item__parametrs-number">800 м</span>
           <span class="front-item__parametrs-text">Дальность полета</span>
@@ -87,6 +88,7 @@
         <div class="front-item__parametrs">
           <span class="front-item__parametrs-number">50 м</span>
           <span class="front-item__parametrs-text">Радиус поражения</span>
+        </div>
         </div>
       </div>
     </section>
@@ -171,7 +173,7 @@
       <address class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
       <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <h3 class="contacts-subtitle">Время работы</h3>
-      <ul>
+      <ul class="contacts-schedule-list">
         <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
         <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
       </ul>
@@ -198,7 +200,8 @@
 
   <footer class="page-footer">
     <div class="page-footer-container">
-    <img class="footer-logo" src="/images/footer-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс»">
+      <img class="footer-logo" src="/images/footer-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс»">
+    <div class="footer-info">
     <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
     <ul class="footer-info-list">
       <li class="footer-info-item">Доставка</li>
@@ -206,6 +209,8 @@
       <li class="footer-info-item">Контакты</li>
     </ul>
     <a class="footer-contacts-phone" href="tel:+78128121212">Тел +7 (812) 812-12-12</a>
+    </div>
+    <div class="footer-social">
     <ul class="footer-social-list">
       <li class="footer-social-item">
         <a class="social-link" href="">
@@ -223,6 +228,7 @@
         </a>
       </li>
     </ul>
+    </div>
     </div>
   </footer>
 </body>
