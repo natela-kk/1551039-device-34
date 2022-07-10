@@ -67,10 +67,23 @@ body {
 }
 
 .product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 44px 40px;
   margin: 0;
-  padding: 0;
   margin-bottom: 44px;
+  padding: 0;
   list-style-type: none;
+}
+
+.product-card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card-image {
+  object-fit: contain;
+  margin-bottom: 32px;
 }
 
 .catalog-header {
@@ -113,7 +126,9 @@ body {
 
 .navigation-item-search {
   width: 517px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 359px 1fr;
+  box-sizing: border-box;
 }
 
 .navigation-link-login {
@@ -182,12 +197,16 @@ body {
 
 
 .navigation-item-input {
+  padding: 0;
+  border: none;
   font-size: 16px;
   line-height: 20px;
+  background-color: #ffe17f;
 }
 
 .navigation-item-input-field {
-  width: 359px;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
 }
 
 .navigation-item {
@@ -195,8 +214,9 @@ body {
 }
 
 .search-button {
-  width: 160px;
-  text-align: center;
+  border: 2px solid #000000;
+  border-radius: 0 50px 50px 0;
+  border-left: none;
 }
 
 .navigation-link-info {
@@ -438,10 +458,27 @@ body {
 }
 
 .subscription-form {
+  display: grid;
+  grid-template-columns: 557px 1fr;
+  width: 810px;
+  padding: 18px 0;
+  /* outline: 3px solid blue; */
   margin-top: 144px;
 }
 
+.subscription-email {
+  border-bottom: 3px solid #c4c4c4;
+}
+
+.subscription-email-input {
+  margin-left: 17px;
+  border: none;
+  background-color: transparent;
+}
+
 .subscription-submit-button {
+  padding: 0 39px;
+  border: 3px solid #c4c4c4;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -531,6 +568,8 @@ body {
 }
 
 .product-card-title {
+  margin: 0;
+  max-width: 230px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
