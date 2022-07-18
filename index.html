@@ -5,11 +5,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+      <link rel="icon" href="./images/fav.svg">
   </head>
 
   <body>
     <header class="page-header">
-      <img class="logo" src="/images/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Device">
+      <a class="logo-link" href="#">
+        <img class="logo" src="/images/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Device">
+      </a>
       <nav class="navigation">
         <ul class="navigation-list navigation-user">
           <li class="navigation-item navigation-item-search">
@@ -18,42 +21,105 @@
               <path
                 d="m15.7 14.3-3.1-3.1C13.5 10 14 8.6 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" />
             </svg>
-            <input class="navigation-item-input navigation-item-input-field" type="search" placeholder="Текст поиска">
-            <input class="search-button  navigation-item-input" type="button" value="Найти">
+            <div class="navigation-item-input-container">
+              <input class="navigation-item-input navigation-item-input-field" type="search" placeholder="Текст поиска">
+            </div>
+            <div class="navigation-item-input-container">
+              <input class="search-button  navigation-item-input" type="button" value="Найти">
+            </div>
           </li>
-          <li class="navigation-item navigation-link-login">
-            <a class="navigation-link">Войти</a>
+          <li class="navigation-item navigation-header-item navigation-link-login">
+            <a class="navigation-link" href="#">Войти</a>
           </li>
-          <li class="navigation-item navigation-link-compare">
-            <a class="navigation-link">Сравнить</a>
+          <li class="visually-hidden navigation-item navigation-header-item navigation-link-loggedin">
+            <a class="navigation-link navigation-link-name">Коля Петухов</a>
+            <a class="navigation-link navigation-link-logout">Выйти</a>
           </li>
-          <li class="navigation-item navigation-link-basket">
-            <a class="navigation-link">Корзина</a>
+          <li class="navigation-item navigation-header-item navigation-link-compare">
+            <a class="navigation-link" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-item navigation-header-item navigation-link-basket">
+            <a class="navigation-link navigation-link-basket-inner" href="#">
+              <span class="basket-count-svg">2</span>
+              Корзина</a>
+            <div class="popover popover-basket">
+              <h2 class="visually-hidden popover-title">Корзина</h2>
+              <ul class="basket-list">
+                <li class="basket-item">
+                  <a class="basket-item-link" href="#">
+                    <img class="basket-item-image" src="./images/catalog/product-1.jpg">
+                    <span class="basket-item-title">Любительская селфи-палка</span>
+                  </a>
+                  <button class="basket-item-close-button" type="button">
+                    <span class="visually-hidden">Удалить товар из корзины</span>
+                  </button>
+                </li>
+                <li class="basket-item">
+                  <a class="basket-item-link" href="#">
+                    <img class="basket-item-image" src="./images/catalog/product-2.jpg">
+                    <span class="basket-item-title">Профессиональная
+                      селфи-палка</span>
+                  </a>
+                  <button class="basket-item-close-button" type="button">
+                    <span class="visually-hidden">Удалить товар из корзины</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="basket-total">
+                <span class="basket-total-items">Товаров: <b class="basket-total-items-number">2</b></span>
+                <span class="basket-total-amount">Сумма: <b class="basket-total-amount-number">2000</b> ₽</span>
+              </div>
+              <div class="basket-link-wrapper">
+                <a class="basket-link" href="#">Открыть корзину</a>
+              </div>
+            </div>
           </li>
         </ul>
         <div class="navigation-sub">
           <div class="navigation-catalog-container">
             <button class="button navigation-link navigation-link-info navigation-catalog" type="button">Каталог
               товаров
+              <svg class="navigation-catalog-button-plus" aria-hidden="true" focusable="false" width="16" height="16"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z" />
+              </svg>
             </button>
-            <svg class="navigation-catalog-button-plus" aria-hidden="true" focusable="false" width="16" height="16"
-              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z" />
-            </svg>
-            <svg class="navigation-catalog-button-minus visually-hidden" aria-hidden="true" focusable="false" width="16"
-              height="2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 0H0v2h16V0Z" />
-            </svg>
+            <button class="catalog-close-button" type="button">
+            </button>
+            <div class="catalog-menu">
+              <ul class="catalog-list">
+                <li class="catalog-item">
+                  <a class="catalog-item-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-item-link" href="#">Моноподы для cелфи</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-item-link" href="#">Экшн-камеры</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-item-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-item-link" href="#">Умные часы</a>
+                </li>
+                <br>
+                <li class="catalog-item">
+                  <a class="catalog-item-link" href="#">Квадрокоптеры
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <ul class="navigation-details">
-            <li class="navigation-item navigation-item-info">
-              <a class="navigation-link navigation-link-info">Доставка</a>
+            <li class="navigation-item navigation-header-item navigation-item-info">
+              <a class="navigation-link navigation-link-info" href="#">Доставка</a>
             </li>
-            <li class="navigation-item navigation-item-info">
-              <a class="navigation-link navigation-link-info">Гарантия</a>
+            <li class="navigation-item navigation-header-item navigation-item-info">
+              <a class="navigation-link navigation-link-info" href="#">Гарантия</a>
             </li>
-            <li class="navigation-item navigation-item-info">
-              <a class="navigation-link navigation-link-info">Контакты</a>
+            <li class="navigation-item navigation-header-item navigation-item-info navigation-link-info-contacts">
+              <a class="navigation-link navigation-link-info" href="#">Контакты</a>
             </li>
           </ul>
         </div>
@@ -63,15 +129,19 @@
     <main class="main-index main-container">
       <h1 class="visually-hidden">Device - интернет-магазин электронной техники</h1>
       <section class="front-item front-item-active">
+        <span class="front-item-number">01</span>
         <div class="active-item-img">
           <h2 class="visually-hidden">Промо-товары</h2>
-          <button class="slider-button slider-prev" type="button">
-            <span class="visually-hidden">Предыдущее фото</span>
-          </button>
-          <img class="front-item__image" src="/images/dron.png" width="560" height="560" alt="Квадрокоптер с лазером">
-          <button class="slider-button slider-next" type="button">
-            <span class="visually-hidden">Следующее фото</span>
-          </button>
+          <img class="front-item__image" src="/images/promo-items/dron.png" width="560" height="560"
+            alt="Квадрокоптер с лазером">
+          <div class="slider-buttons-wrapper">
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+          </div>
         </div>
         <div class="front-item__description">
           <h3 class="front-item__header">Порхает как бабочка,
@@ -83,14 +153,26 @@
           <div class="pagination-container">
             <a class="button crossed-button front-item-details-button" href="#">Подробнее</a>
             <ol class="slider-pagination-list">
-              <li class="slider-pagination-item slider-pagination-item-active">
-                <span class="visually-hidden">1 фото</span>
+              <li class="slider-pagination-item">
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">1 товар</span>
+                  </button>
+                </div>
               </li>
               <li class="slider-pagination-item">
-                <span class="visually-hidden">2 фото</span>
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">2 товар</span>
+                  </button>
+                </div>
               </li>
               <li class="slider-pagination-item">
-                <span class="visually-hidden">3 фото</span>
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">3 товар</span>
+                  </button>
+                </div>
               </li>
             </ol>
           </div>
@@ -107,73 +189,206 @@
         </div>
       </section>
 
+      <section class="front-item front-item-hidden">
+        <span class="front-item-number">02</span>
+        <div class="active-item-img">
+          <h2 class="visually-hidden">Промо-товары</h2>
+          <img class="front-item__image" src="/images/promo-items/dron.png" width="560" height="560"
+            alt="Квадрокоптер с лазером">
+          <div class="slider-buttons-wrapper">
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+          </div>
+        </div>
+        <div class="front-item__description">
+          <h3 class="front-item__header">Худеем
+            правильно!</h3>
+          <p class="front-item__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+            соблюдать диету.
+          </p>
+          <div class="pagination-container">
+            <a class="button crossed-button front-item-details-button" href="#">Подробнее</a>
+            <ol class="slider-pagination-list">
+              <li class="slider-pagination-item">
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">1 фото</span>
+                  </button>
+                </div>
+              </li>
+              <li class="slider-pagination-item">
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">2 фото</span>
+                  </button>
+                </div>
+              </li>
+              <li class="slider-pagination-item">
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="front-item__parametrs-list">
+            <div class="front-item__parametrs">
+              <span class="front-item__parametrs-number">48 часов</span>
+              <span class="front-item__parametrs-text">Без подзарядки</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="front-item front-item-hidden">
+        <span class="front-item-number">03</span>
+        <div class="active-item-img">
+          <h2 class="visually-hidden">Промо-товары</h2>
+          <img class="front-item__image" src="/images/promo-items/dron.png" width="560" height="560"
+            alt="Квадрокоптер с лазером">
+          <div class="slider-buttons-wrapper">
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+          </div>
+        </div>
+        <div class="front-item__description">
+          <h3 class="front-item__header">Делай селфи, как Бен Стиллер!</h3>
+          <p class="front-item__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
+            метров длиной и весом всего 5 кг.
+          </p>
+          <div class="pagination-container">
+            <a class="button crossed-button front-item-details-button" href="#">Подробнее</a>
+            <ol class="slider-pagination-list">
+              <li class="slider-pagination-item">
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">1 фото</span>
+                  </button>
+                </div>
+              </li>
+              <li class="slider-pagination-item">
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">2 фото</span>
+                  </button>
+                </div>
+              </li>
+              <li class="slider-pagination-item">
+                <div class="slider-pagination-wrapper">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="front-item__parametrs-list">
+            <div class="front-item__parametrs">
+              <span class="front-item__parametrs-number">8,5 м</span>
+              <span class="front-item__parametrs-text">Длина палки</span>
+            </div>
+            <div class="front-item__parametrs">
+              <span class="front-item__parametrs-number">5 кг</span>
+              <span class="front-item__parametrs-text">Вес палки</span>
+            </div>
+            <div class="front-item__parametrs">
+              <span class="front-item__parametrs-number">Карбон</span>
+              <span class="front-item__parametrs-text">Материал</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="products">
         <h2 class="visually-hidden">Группы товаров</h2>
         <ul class="products-list">
           <li class="products-item">
-            <div class="product-icon-background">
-              <svg class="product-icon" width="97" height="55" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M84.13 32.64V20c0-1.3 1.05-2.37 2.34-2.37l8.32 1.58v-8.19c0-2.36-1.7-3.43-4.2-4.27L67.4.17c1.62 1.4 1.9 2.04 1.9 4.4v45.21c0 2.36-.46 4.07-1.97 5.21l23.26-7.07c2.4-.83 4.2-4.21 4.2-6.57v-7.91l-8.32 1.57a2.35 2.35 0 0 1-2.34-2.37Z" />
-                <path
-                  d="m95.13 20.98-7.6-1.45c-1 0-1.82.83-1.82 1.86v9.86c0 1.03.81 1.86 1.82 1.86l7.6-1.43c1.15-.42 1.82-.83 1.82-1.86v-6.99c0-1.02-.76-1.5-1.82-1.85ZM67.17 4.48c0-5.08-4.23-4.46-4.23-4.46S5.84 4.74 2.84 5.14C-.16 5.55 0 9.54 0 9.54V45.8c0 3.74 2.6 3.75 2.6 3.75l16.48 1.4L27.2 39.3s1.11-1.83 2.5-1.83c1.4 0 2.44 1.86 2.44 1.86l9.06 13.52s18.9 1.91 22.52 1.91c3.63 0 3.44-5.02 3.44-5.02V4.48ZM12.98 37.2c-3.7 0-6.7-4.6-6.7-10.27 0-5.68 3-10.28 6.7-10.28s6.7 4.6 6.7 10.28c0 5.67-3 10.27-6.7 10.27Zm36.16 1.43c-4.66 0-8.44-5.24-8.44-11.7 0-6.47 3.78-11.7 8.44-11.7s8.44 5.23 8.44 11.7c0 6.46-3.78 11.7-8.44 11.7Z" />
-              </svg>
-            </div>
-            <span class="products-caption">Виртуальная
-              реальность</span>
+            <a class="products-item-link" href="#">
+              <div class="product-icon-background">
+                <svg class="product-icon" width="97" height="55" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M84.13 32.64V20c0-1.3 1.05-2.37 2.34-2.37l8.32 1.58v-8.19c0-2.36-1.7-3.43-4.2-4.27L67.4.17c1.62 1.4 1.9 2.04 1.9 4.4v45.21c0 2.36-.46 4.07-1.97 5.21l23.26-7.07c2.4-.83 4.2-4.21 4.2-6.57v-7.91l-8.32 1.57a2.35 2.35 0 0 1-2.34-2.37Z" />
+                  <path
+                    d="m95.13 20.98-7.6-1.45c-1 0-1.82.83-1.82 1.86v9.86c0 1.03.81 1.86 1.82 1.86l7.6-1.43c1.15-.42 1.82-.83 1.82-1.86v-6.99c0-1.02-.76-1.5-1.82-1.85ZM67.17 4.48c0-5.08-4.23-4.46-4.23-4.46S5.84 4.74 2.84 5.14C-.16 5.55 0 9.54 0 9.54V45.8c0 3.74 2.6 3.75 2.6 3.75l16.48 1.4L27.2 39.3s1.11-1.83 2.5-1.83c1.4 0 2.44 1.86 2.44 1.86l9.06 13.52s18.9 1.91 22.52 1.91c3.63 0 3.44-5.02 3.44-5.02V4.48ZM12.98 37.2c-3.7 0-6.7-4.6-6.7-10.27 0-5.68 3-10.28 6.7-10.28s6.7 4.6 6.7 10.28c0 5.67-3 10.27-6.7 10.27Zm36.16 1.43c-4.66 0-8.44-5.24-8.44-11.7 0-6.47 3.78-11.7 8.44-11.7s8.44 5.23 8.44 11.7c0 6.46-3.78 11.7-8.44 11.7Z" />
+                </svg>
+              </div>
+              <span class="products-caption">Виртуальная
+                реальность</span>
+            </a>
           </li>
           <li class="products-item">
-            <div class="product-icon-background">
-              <svg class="product-icon product-icon-monopod" width="87" height="117" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M82.82 4.01H3.33A3.19 3.19 0 0 0 .14 7.2v46.4a3.19 3.19 0 0 0 3.19 3.2h79.5A3.19 3.19 0 0 0 86 53.6V7.2A3.19 3.19 0 0 0 82.82 4ZM8.4 37.24h-.22a3.19 3.19 0 0 1-3.2-3.2v-7.28a3.19 3.19 0 0 1 3.2-3.18h.22v13.66ZM69.62 52.4H13.34v-44h56.28v44Zm8.78-17.86a4.15 4.15 0 1 1 0-8.29 4.15 4.15 0 0 1 0 8.3ZM54.65 0H31.5v2.76h23.15V0ZM46.6 64.86V61.9h8.05v-2.76H31.5v2.76h8.04v35.24a6.07 6.07 0 0 0-3.63 5.56V117h14.33v-14.3c0-2.5-1.5-4.63-3.63-5.56v-28h4.8l5.04 1.22v-6.71l-5.05 1.21h-4.8Z" />
-              </svg>
-            </div>
-            <span class="products-caption">Моноподы
-              для селфи</span>
+            <a class="products-item-link" href="#">
+              <div class="product-icon-background">
+                <svg class="product-icon product-icon-monopod" width="87" height="117" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M82.82 4.01H3.33A3.19 3.19 0 0 0 .14 7.2v46.4a3.19 3.19 0 0 0 3.19 3.2h79.5A3.19 3.19 0 0 0 86 53.6V7.2A3.19 3.19 0 0 0 82.82 4ZM8.4 37.24h-.22a3.19 3.19 0 0 1-3.2-3.2v-7.28a3.19 3.19 0 0 1 3.2-3.18h.22v13.66ZM69.62 52.4H13.34v-44h56.28v44Zm8.78-17.86a4.15 4.15 0 1 1 0-8.29 4.15 4.15 0 0 1 0 8.3ZM54.65 0H31.5v2.76h23.15V0ZM46.6 64.86V61.9h8.05v-2.76H31.5v2.76h8.04v35.24a6.07 6.07 0 0 0-3.63 5.56V117h14.33v-14.3c0-2.5-1.5-4.63-3.63-5.56v-28h4.8l5.04 1.22v-6.71l-5.05 1.21h-4.8Z" />
+                </svg>
+              </div>
+              <span class="products-caption">Моноподы<br>
+                для селфи</span>
+            </a>
           </li>
           <li class="products-item">
-            <div class="product-icon-background">
-              <svg class="product-icon" width="72" height="87" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M53.35 1.49c0-.74-.58-1.49-1.31-1.49H9.05c-.73 0-1.38.75-1.38 1.49v3.52h45.68V1.5Zm.85 80.31h-9.6V71.44h-6.95v2.5H18.77a3.49 3.49 0 0 0-3.18-2.15H3.56A3.59 3.59 0 0 0 0 75.31v3.02a3.55 3.55 0 0 0 3.56 3.48h12.03c1.52 0 2.8-.9 3.27-2.33h18.79v2.33h-9.52c-.53 0-1.01.44-1.01.97v3.17c0 .54.48 1.05 1.01 1.05H54.2c.53 0 .93-.51.93-1.05v-3.17c0-.53-.4-.97-.93-.97Zm6.47-69.41a7.04 7.04 0 0 0-6.77-5.05H7.15A7.1 7.1 0 0 0 0 14.36v46.9a7.18 7.18 0 0 0 7.15 7.12h46.74c3.9 0 7.13-3.2 7.13-7.12V50.92a23.3 23.3 0 0 0-.36-38.52ZM12.24 62.15a5.91 5.91 0 1 1 .02-11.82 5.91 5.91 0 0 1-.02 11.82Zm5.96-32.6c0 .78-.64 1.42-1.42 1.42H7.84c-.78 0-1.42-.64-1.42-1.42V15.39c0-.79.64-1.43 1.42-1.43h8.94c.78 0 1.42.64 1.42 1.43v14.16Zm29.56 22.3a20.1 20.1 0 0 1-20.05-20.12 20.1 20.1 0 0 1 20.05-20.12 20.1 20.1 0 0 1 20.06 20.13 20.1 20.1 0 0 1-20.06 20.12Z" />
-                <path
-                  d="M47.76 43.96a12.2 12.2 0 0 0 12.19-12.23 12.2 12.2 0 0 0-12.19-12.22 12.2 12.2 0 0 0-12.19 12.22 12.2 12.2 0 0 0 12.2 12.23Zm-16.2-10.79a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87Zm32.4 0a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87ZM39.1 19.43a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87Zm17.31 27.48a1.43 1.43 0 1 0 0-2.86 1.43 1.43 0 0 0 0 2.86ZM55.7 19a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87ZM39.83 47.34a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87Z" />
-              </svg>
-            </div>
-            <span class="products-caption">Экшн-камеры</span>
+            <a class="products-item-link" href="#">
+              <div class="product-icon-background">
+                <svg class="product-icon" width="72" height="87" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M53.35 1.49c0-.74-.58-1.49-1.31-1.49H9.05c-.73 0-1.38.75-1.38 1.49v3.52h45.68V1.5Zm.85 80.31h-9.6V71.44h-6.95v2.5H18.77a3.49 3.49 0 0 0-3.18-2.15H3.56A3.59 3.59 0 0 0 0 75.31v3.02a3.55 3.55 0 0 0 3.56 3.48h12.03c1.52 0 2.8-.9 3.27-2.33h18.79v2.33h-9.52c-.53 0-1.01.44-1.01.97v3.17c0 .54.48 1.05 1.01 1.05H54.2c.53 0 .93-.51.93-1.05v-3.17c0-.53-.4-.97-.93-.97Zm6.47-69.41a7.04 7.04 0 0 0-6.77-5.05H7.15A7.1 7.1 0 0 0 0 14.36v46.9a7.18 7.18 0 0 0 7.15 7.12h46.74c3.9 0 7.13-3.2 7.13-7.12V50.92a23.3 23.3 0 0 0-.36-38.52ZM12.24 62.15a5.91 5.91 0 1 1 .02-11.82 5.91 5.91 0 0 1-.02 11.82Zm5.96-32.6c0 .78-.64 1.42-1.42 1.42H7.84c-.78 0-1.42-.64-1.42-1.42V15.39c0-.79.64-1.43 1.42-1.43h8.94c.78 0 1.42.64 1.42 1.43v14.16Zm29.56 22.3a20.1 20.1 0 0 1-20.05-20.12 20.1 20.1 0 0 1 20.05-20.12 20.1 20.1 0 0 1 20.06 20.13 20.1 20.1 0 0 1-20.06 20.12Z" />
+                  <path
+                    d="M47.76 43.96a12.2 12.2 0 0 0 12.19-12.23 12.2 12.2 0 0 0-12.19-12.22 12.2 12.2 0 0 0-12.19 12.22 12.2 12.2 0 0 0 12.2 12.23Zm-16.2-10.79a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87Zm32.4 0a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87ZM39.1 19.43a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87Zm17.31 27.48a1.43 1.43 0 1 0 0-2.86 1.43 1.43 0 0 0 0 2.86ZM55.7 19a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87ZM39.83 47.34a1.44 1.44 0 1 0 0-2.87 1.44 1.44 0 0 0 0 2.87Z" />
+                </svg>
+              </div>
+              <span class="products-caption">Экшн-камеры</span>
+            </a>
           </li>
           <li class="products-item">
-            <div class="product-icon-background">
-              <svg class="product-icon" width="108" height="66" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M98.97 5.07a10.4 10.4 0 0 1 1.2 4.82V31a10.5 10.5 0 0 1-7.24 9.9c-1.33 4-3.78 7.86-8.05 10.44-8.68 5.23-31.12 4.83-31.2 4.83-.08 0-22.51.4-31.19-4.83a18.73 18.73 0 0 1-8.04-10.28A10.5 10.5 0 0 1 6.69 31V9.9c0-1.68.43-3.28 1.14-4.69C4.17 6.1 0 7.92 0 11.43v29.99c0 10.25 11.84 24.43 53.66 24.43 41.82 0 53.65-14.18 53.65-24.43V11.43c0-3.68-4.57-5.49-8.34-6.36Z" />
-                <path
-                  d="M20.56 39.46h65.52c5.57 0 10.08-4.51 10.08-10.08V10.94C96.16 5.37 91.65.86 86.08.86H20.56A10.08 10.08 0 0 0 10.5 10.94v18.44c0 5.57 4.5 10.08 10.07 10.08Zm63.13-29a1.57 1.57 0 1 1 0 3.15 1.57 1.57 0 0 1 0-3.14Zm0 4.05a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.82a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.03-15.94a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.04-15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.82a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-7.66-15.94a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 8.08a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.88a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.98a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.03-15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 8.08a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 7.86a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.04-15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 7.86a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-8.3-15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.88a1.57 1.57 0 1 1 .01 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.98a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.03-11.9a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm-8.5-.21a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.03a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.04-8.07a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.03a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.26-8.07a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.03a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14ZM26.3 10.26a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.03a1.57 1.57 0 1 1 0 3.15 1.57 1.57 0 0 1 0-3.15Zm0 4.04a1.57 1.57 0 1 1 0 3.15 1.57 1.57 0 0 1 0-3.15Zm-4.04-8.07a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.03a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Z" />
-              </svg>
-            </div>
-            <span class="products-caption">Фитнес-браслеты</span>
+            <a class="products-item-link" href="#">
+              <div class="product-icon-background">
+                <svg class="product-icon" width="108" height="66" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M98.97 5.07a10.4 10.4 0 0 1 1.2 4.82V31a10.5 10.5 0 0 1-7.24 9.9c-1.33 4-3.78 7.86-8.05 10.44-8.68 5.23-31.12 4.83-31.2 4.83-.08 0-22.51.4-31.19-4.83a18.73 18.73 0 0 1-8.04-10.28A10.5 10.5 0 0 1 6.69 31V9.9c0-1.68.43-3.28 1.14-4.69C4.17 6.1 0 7.92 0 11.43v29.99c0 10.25 11.84 24.43 53.66 24.43 41.82 0 53.65-14.18 53.65-24.43V11.43c0-3.68-4.57-5.49-8.34-6.36Z" />
+                  <path
+                    d="M20.56 39.46h65.52c5.57 0 10.08-4.51 10.08-10.08V10.94C96.16 5.37 91.65.86 86.08.86H20.56A10.08 10.08 0 0 0 10.5 10.94v18.44c0 5.57 4.5 10.08 10.07 10.08Zm63.13-29a1.57 1.57 0 1 1 0 3.15 1.57 1.57 0 0 1 0-3.14Zm0 4.05a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.82a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.03-15.94a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.04-15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.82a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-7.66-15.94a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 8.08a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.88a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.98a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.03-15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 8.08a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 7.86a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.04-15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 7.86a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-8.3-15.94a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.88a1.57 1.57 0 1 1 .01 3.13 1.57 1.57 0 0 1 0-3.13Zm0 3.98a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.03-11.9a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm-8.5-.21a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.03a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.04-8.07a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.04a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.03a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm-4.26-8.07a1.57 1.57 0 1 1 0 3.13 1.57 1.57 0 0 1 0-3.13Zm0 4.03a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14ZM26.3 10.26a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.04a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.03a1.57 1.57 0 1 1 0 3.15 1.57 1.57 0 0 1 0-3.15Zm0 4.04a1.57 1.57 0 1 1 0 3.15 1.57 1.57 0 0 1 0-3.15Zm-4.04-8.07a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Zm0 4.03a1.57 1.57 0 1 1 0 3.14 1.57 1.57 0 0 1 0-3.14Z" />
+                </svg>
+              </div>
+              <span class="products-caption">Фитнес-браслеты</span>
+            </a>
           </li>
           <li class="products-item">
-            <div class="product-icon-background">
-              <svg class="product-icon" width="57" height="98" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M54.5 32.2h-1.52v-4.64a9.16 9.16 0 0 0-9.08-9.19H9.08c-5 0-9.08 4.13-9.08 9.19v42.86a9.16 9.16 0 0 0 9.08 9.19H43.9c5 0 9.08-4.13 9.08-9.19v-3.41h1.52c.41 0 .75-.34.75-.76V52.47a.76.76 0 0 0-.76-.77h-1.51v-8.79h1.52c.83 0 1.5-.68 1.5-1.53v-7.65c0-.84-.67-1.53-1.5-1.53Zm-20.42-3.11c2.93 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.35c-2.92 0-5.3-2.4-5.3-5.35a5.33 5.33 0 0 1 5.3-5.36Zm-15.13 0c2.92 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.35c-2.93 0-5.3-2.4-5.3-5.35a5.33 5.33 0 0 1 5.3-5.36ZM5.3 49.39a5.33 5.33 0 0 1 5.3-5.35c2.92 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.36c-2.93 0-5.3-2.4-5.3-5.36Zm13.64 19.5c-2.92 0-5.3-2.4-5.3-5.35a5.33 5.33 0 0 1 5.3-5.36c2.93 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.35Zm1.5-19.9a6.09 6.09 0 0 1 6.05-6.12 6.09 6.09 0 0 1 6.06 6.12 6.09 6.09 0 0 1-6.06 6.13 6.1 6.1 0 0 1-6.05-6.13Zm13.64 19.9c-2.92 0-5.3-2.4-5.3-5.35a5.33 5.33 0 0 1 5.3-5.36c2.93 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.35Zm8.3-14.13c-2.92 0-5.3-2.4-5.3-5.36a5.33 5.33 0 0 1 5.3-5.36c2.93 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.36ZM9.65 15.31h33.68c.85 0 1.44-.68 1.3-1.51l-1.6-10.77A3.68 3.68 0 0 0 39.5 0H13.47a3.68 3.68 0 0 0-3.51 3.03L8.34 13.8c-.12.83.46 1.51 1.3 1.51Zm33.68 67.36H9.65c-.85 0-1.43.68-1.3 1.52l1.6 10.76a3.68 3.68 0 0 0 3.52 3.03h26.04a3.68 3.68 0 0 0 3.51-3.02l1.62-10.77a1.28 1.28 0 0 0-1.3-1.52Z" />
-              </svg>
-            </div>
-            <span class="products-caption">Умные часы</span>
+            <a class="products-item-link" href="#">
+              <div class="product-icon-background">
+                <svg class="product-icon" width="57" height="98" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M54.5 32.2h-1.52v-4.64a9.16 9.16 0 0 0-9.08-9.19H9.08c-5 0-9.08 4.13-9.08 9.19v42.86a9.16 9.16 0 0 0 9.08 9.19H43.9c5 0 9.08-4.13 9.08-9.19v-3.41h1.52c.41 0 .75-.34.75-.76V52.47a.76.76 0 0 0-.76-.77h-1.51v-8.79h1.52c.83 0 1.5-.68 1.5-1.53v-7.65c0-.84-.67-1.53-1.5-1.53Zm-20.42-3.11c2.93 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.35c-2.92 0-5.3-2.4-5.3-5.35a5.33 5.33 0 0 1 5.3-5.36Zm-15.13 0c2.92 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.35c-2.93 0-5.3-2.4-5.3-5.35a5.33 5.33 0 0 1 5.3-5.36ZM5.3 49.39a5.33 5.33 0 0 1 5.3-5.35c2.92 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.36c-2.93 0-5.3-2.4-5.3-5.36Zm13.64 19.5c-2.92 0-5.3-2.4-5.3-5.35a5.33 5.33 0 0 1 5.3-5.36c2.93 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.35Zm1.5-19.9a6.09 6.09 0 0 1 6.05-6.12 6.09 6.09 0 0 1 6.06 6.12 6.09 6.09 0 0 1-6.06 6.13 6.1 6.1 0 0 1-6.05-6.13Zm13.64 19.9c-2.92 0-5.3-2.4-5.3-5.35a5.33 5.33 0 0 1 5.3-5.36c2.93 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.35Zm8.3-14.13c-2.92 0-5.3-2.4-5.3-5.36a5.33 5.33 0 0 1 5.3-5.36c2.93 0 5.3 2.4 5.3 5.36a5.33 5.33 0 0 1-5.3 5.36ZM9.65 15.31h33.68c.85 0 1.44-.68 1.3-1.51l-1.6-10.77A3.68 3.68 0 0 0 39.5 0H13.47a3.68 3.68 0 0 0-3.51 3.03L8.34 13.8c-.12.83.46 1.51 1.3 1.51Zm33.68 67.36H9.65c-.85 0-1.43.68-1.3 1.52l1.6 10.76a3.68 3.68 0 0 0 3.52 3.03h26.04a3.68 3.68 0 0 0 3.51-3.02l1.62-10.77a1.28 1.28 0 0 0-1.3-1.52Z" />
+                </svg>
+              </div>
+              <span class="products-caption">Умные часы</span>
+            </a>
           </li>
           <li class="products-item">
-            <div class="product-icon-background">
-              <svg class="product-icon" width="133" height="70" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12.05.26C6.51.75 1.84 1.86.58 2.93c-.73.62-.73.62-.24 1.16C1 4.8 4.06 5.73 7.6 6.32c4 .67 12.51.7 13.72.05 1.22-.66 1.63-1.41 1.63-2.98 0-1.62-.62-2.41-2.22-2.85C19.27.15 14.94 0 12.05.26Zm13.72.23c-.12.28-.25 2.1-.25 4.11 0 4.06.15 3.78-2.2 3.93l-1.03.08-.25 5.09-1.2.28a4.75 4.75 0 0 0-3.78 5.3c.13 1.92 1.03 3.34 2.58 4.08 1.1.52 1.47.54 11.24.54 5.55 0 10.14.08 10.19.18.05.13-1.1 9.4-2.58 20.64-1.44 11.23-2.68 21-2.7 21.67C35.72 68 36.6 69 38.12 69c1.24 0 2.01-.64 2.32-1.9.13-.52 1.5-10.34 3.02-21.83a727.78 727.78 0 0 1 2.94-20.86c.1 0 1.08 1.4 2.2 3.13 2.93 4.63 2.4 4.32 7.63 4.32h4.36v5.63l-5.14.08c-4.72.07-5.2.12-5.88.61-1.57 1.16-1.62 1.42-1.62 10.98 0 9.53.02 9.79 1.52 11.05l.85.7H81.7l.85-.7c1.5-1.26 1.52-1.52 1.52-11.05 0-9.56-.05-9.82-1.63-10.98-.67-.49-1.16-.54-5.88-.61l-5.13-.08v-5.63h4.36c5.23 0 4.7.3 7.63-4.32a25.53 25.53 0 0 1 2.2-3.13c.07 0 1.42 9.4 2.94 20.86 1.52 11.5 2.89 21.31 3.01 21.83.31 1.26 1.09 1.9 2.33 1.9 1.52 0 2.4-1 2.34-2.62-.02-.67-1.26-10.44-2.7-21.67a903 903 0 0 1-2.58-20.64c.05-.1 4.64-.18 10.19-.18 9.77 0 10.13-.02 11.24-.54 1.55-.74 2.45-2.16 2.58-4.08a4.75 4.75 0 0 0-3.8-5.3L110 13.7l-.26-5.09-1.03-.08c-2.34-.15-2.2.13-2.2-3.93 0-2-.12-3.83-.25-4.11-.2-.36-.54-.49-1.37-.49-.61 0-1.23.13-1.42.3-.2.21-.3 1.47-.3 3.94 0 2.47-.1 3.73-.31 3.93-.18.18-.9.31-1.65.31-1.63 0-1.66.05-1.66 3.11v2.29H32.48v-2.29c0-3.06-.02-3.1-1.65-3.1-.75 0-1.47-.14-1.65-.32-.2-.2-.31-1.46-.31-3.93s-.1-3.73-.3-3.93c-.2-.18-.82-.31-1.44-.31-.82 0-1.16.13-1.37.49ZM68.62 40.6a9.5 9.5 0 0 1 6.16 6.17c.44 1.54.31 4.21-.28 5.78a10.23 10.23 0 0 1-4.57 4.94c-1.29.64-1.75.71-3.92.71-2.16 0-2.63-.07-3.92-.71a10.22 10.22 0 0 1-4.56-4.94c-.6-1.57-.73-4.24-.29-5.78a9.58 9.58 0 0 1 6.06-6.17 7.56 7.56 0 0 1 5.32 0Z" />
-                <path
-                  d="M63.8 44.44c-2.04.92-3.51 3.65-3.07 5.73a5.43 5.43 0 0 0 8 3.7 5.3 5.3 0 0 0 2.44-5.78 5.38 5.38 0 0 0-5.16-4.14c-.64 0-1.62.23-2.22.49ZM36.1.15c-3.93.67-4.52 1.14-4.52 3.45 0 1.82.46 2.41 2.27 2.95 1.55.47 7.17.52 10.5.13 6.86-.82 11.32-2.54 9.7-3.75-1.27-.9-4.9-1.88-9.06-2.39-2.47-.3-8-.54-8.9-.39Zm53.38.11c-6.31.59-11.86 2.08-11.86 3.18 0 1.73 7.84 3.47 15.63 3.5 5.8 0 7.2-.64 7.2-3.34 0-1.83-.62-2.62-2.38-3.09C96.42.11 92.4 0 89.48.26Zm23.3.02c-1.78.23-3.02.77-3.43 1.5-.4.76-.31 2.9.15 3.57.93 1.3 1.65 1.46 7.07 1.46 3.66 0 5.8-.13 7.87-.49 3.53-.59 6.6-1.51 7.24-2.23.5-.54.5-.54-.23-1.16-1.34-1.13-5.96-2.18-11.92-2.67-3.48-.29-4.48-.29-6.75.02Z" />
-              </svg>
-            </div>
-            <span class="products-caption">Квадрокоптеры</span>
+            <a class="products-item-link" href="#">
+              <div class="product-icon-background">
+                <svg class="product-icon" width="133" height="70" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.05.26C6.51.75 1.84 1.86.58 2.93c-.73.62-.73.62-.24 1.16C1 4.8 4.06 5.73 7.6 6.32c4 .67 12.51.7 13.72.05 1.22-.66 1.63-1.41 1.63-2.98 0-1.62-.62-2.41-2.22-2.85C19.27.15 14.94 0 12.05.26Zm13.72.23c-.12.28-.25 2.1-.25 4.11 0 4.06.15 3.78-2.2 3.93l-1.03.08-.25 5.09-1.2.28a4.75 4.75 0 0 0-3.78 5.3c.13 1.92 1.03 3.34 2.58 4.08 1.1.52 1.47.54 11.24.54 5.55 0 10.14.08 10.19.18.05.13-1.1 9.4-2.58 20.64-1.44 11.23-2.68 21-2.7 21.67C35.72 68 36.6 69 38.12 69c1.24 0 2.01-.64 2.32-1.9.13-.52 1.5-10.34 3.02-21.83a727.78 727.78 0 0 1 2.94-20.86c.1 0 1.08 1.4 2.2 3.13 2.93 4.63 2.4 4.32 7.63 4.32h4.36v5.63l-5.14.08c-4.72.07-5.2.12-5.88.61-1.57 1.16-1.62 1.42-1.62 10.98 0 9.53.02 9.79 1.52 11.05l.85.7H81.7l.85-.7c1.5-1.26 1.52-1.52 1.52-11.05 0-9.56-.05-9.82-1.63-10.98-.67-.49-1.16-.54-5.88-.61l-5.13-.08v-5.63h4.36c5.23 0 4.7.3 7.63-4.32a25.53 25.53 0 0 1 2.2-3.13c.07 0 1.42 9.4 2.94 20.86 1.52 11.5 2.89 21.31 3.01 21.83.31 1.26 1.09 1.9 2.33 1.9 1.52 0 2.4-1 2.34-2.62-.02-.67-1.26-10.44-2.7-21.67a903 903 0 0 1-2.58-20.64c.05-.1 4.64-.18 10.19-.18 9.77 0 10.13-.02 11.24-.54 1.55-.74 2.45-2.16 2.58-4.08a4.75 4.75 0 0 0-3.8-5.3L110 13.7l-.26-5.09-1.03-.08c-2.34-.15-2.2.13-2.2-3.93 0-2-.12-3.83-.25-4.11-.2-.36-.54-.49-1.37-.49-.61 0-1.23.13-1.42.3-.2.21-.3 1.47-.3 3.94 0 2.47-.1 3.73-.31 3.93-.18.18-.9.31-1.65.31-1.63 0-1.66.05-1.66 3.11v2.29H32.48v-2.29c0-3.06-.02-3.1-1.65-3.1-.75 0-1.47-.14-1.65-.32-.2-.2-.31-1.46-.31-3.93s-.1-3.73-.3-3.93c-.2-.18-.82-.31-1.44-.31-.82 0-1.16.13-1.37.49ZM68.62 40.6a9.5 9.5 0 0 1 6.16 6.17c.44 1.54.31 4.21-.28 5.78a10.23 10.23 0 0 1-4.57 4.94c-1.29.64-1.75.71-3.92.71-2.16 0-2.63-.07-3.92-.71a10.22 10.22 0 0 1-4.56-4.94c-.6-1.57-.73-4.24-.29-5.78a9.58 9.58 0 0 1 6.06-6.17 7.56 7.56 0 0 1 5.32 0Z" />
+                  <path
+                    d="M63.8 44.44c-2.04.92-3.51 3.65-3.07 5.73a5.43 5.43 0 0 0 8 3.7 5.3 5.3 0 0 0 2.44-5.78 5.38 5.38 0 0 0-5.16-4.14c-.64 0-1.62.23-2.22.49ZM36.1.15c-3.93.67-4.52 1.14-4.52 3.45 0 1.82.46 2.41 2.27 2.95 1.55.47 7.17.52 10.5.13 6.86-.82 11.32-2.54 9.7-3.75-1.27-.9-4.9-1.88-9.06-2.39-2.47-.3-8-.54-8.9-.39Zm53.38.11c-6.31.59-11.86 2.08-11.86 3.18 0 1.73 7.84 3.47 15.63 3.5 5.8 0 7.2-.64 7.2-3.34 0-1.83-.62-2.62-2.38-3.09C96.42.11 92.4 0 89.48.26Zm23.3.02c-1.78.23-3.02.77-3.43 1.5-.4.76-.31 2.9.15 3.57.93 1.3 1.65 1.46 7.07 1.46 3.66 0 5.8-.13 7.87-.49 3.53-.59 6.6-1.51 7.24-2.23.5-.54.5-.54-.23-1.16-1.34-1.13-5.96-2.18-11.92-2.67-3.48-.29-4.48-.29-6.75.02Z" />
+                </svg>
+              </div>
+              <span class="products-caption">Квадрокоптеры</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -183,16 +398,35 @@
           <h2 class="visually-hidden">Детали продажи</h2>
           <nav class="sale-details__navigation">
             <ul class="sale-details__navigation-list">
-              <li class="crossed-button crossed-button-selected sale-details__navigation-item">Доставка</li>
-              <li class="crossed-button sale-details__navigation-item">Гарантия</li>
-              <li class="crossed-button sale-details__navigation-item">Кредит</li>
+              <li class="crossed-button navigation-item-info-current sale-details__navigation-item">
+                <button class="sale-details__navigation-button navigation-button-current"
+                  type="button">Доставка</button>
+              </li>
+              <li class="crossed-button sale-details__navigation-item">
+                <button class="sale-details__navigation-button" type="button">Гарантия</button>
+              </li>
+              <li class="crossed-button sale-details__navigation-item">
+                <button class="sale-details__navigation-button" type="button">Кредит</button>
+              </li>
             </ul>
           </nav>
-          <div class="sale-details__description">
+          <div class="sale-details__description sale-details-delivery">
             <h3 class="sale-details__header">Доставка</h3>
             <p class="sale-details__text">Мы с удовольствием доставим ваш товар прямо
-              к вашему подъезду совершенно бесплатно! Ведь
-              мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <br>к вашему подъезду совершенно бесплатно! Ведь
+              мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+          </div>
+          <div class="sale-details__description sale-details-guarantee visually-hidden">
+            <h3 class="sale-details__header">Гарантия</h3>
+            <p class="sale-details__text">Если из-за возгорания купленного у нас товара у вас
+              сгорит дом — не переживайте, мы выдадим вам новый.
+              Товар, не дом, конечно же.</p>
+          </div>
+          <div class="sale-details__description sale-details-credit visually-hidden">
+            <h3 class="sale-details__header">Кредит</h3>
+            <p class="sale-details__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас
+              наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
           </div>
           <div class="sale-details__description visually-hidden">
             <h3 class="sale-details__description-header ">Гарантия</h3>
@@ -205,9 +439,14 @@
         </div>
       </section>
 
-      <div class="add-info">
+      <a class="add-info" href="#">
         <p class="add-info__text">Доставим редкий товар под заказ</p>
-      </div>
+        <svg class="add-info-tooltip-icon" width="2" height="12" viewbox="0 0 2 12" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 0H0V2H2V0Z" fill="currentColor" />
+        <path d="M2 4H0V12H2V4Z" fill="currentColor" />
+      </svg>
+      </a>
 
       <div class="company_info">
         <section class="about">
@@ -215,7 +454,7 @@
           <p class="about-description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из
             нас.
           </p>
-          <p class="about-description">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными
+          <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными
             компаниями:</p>
           <ul class="about-companies-list">
             <li class="about-companies-item">Меловые линии</li>
@@ -227,15 +466,15 @@
 
         <section class="contacts">
           <h2 class="contacts-title">Контакты</h2>
-          <p class="contacts-description">Вы можете забрать товар сами, заехав в наш офис.
+          <p>Вы можете забрать товар сами, заехав в наш офис.
             Заодно сможете проверить работоспособность покупки.</p>
           <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
           <address class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           <h3 class="contacts-subtitle">Время работы</h3>
           <ul class="contacts-schedule-list">
-            <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
-            <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
+            <li>пн—пт: с 10:00 до 22:00</li>
+            <li>сб—вс: с 10:00 до 19:00</li>
           </ul>
           <a class="button crossed-button contacts-text-button" href="#">Напишите нам</a>
         </section>
@@ -245,13 +484,14 @@
           <div class="subscription-top">
             <h2 class="subscription-title">Подпишитесь
               на рассылку</h2>
-            <p class="subscription-description">Еженедельный дайджест с обзорами новинок,
+            <p class="subscription-description">Еженедельный дайджест с обзорами новинок,<br>
               длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           </div>
           <div class="subscription-sub">
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="subscription-email">
-                <input class="subscription-email-input" type="email" name="subscription-email" placeholder="Ваш e-mail">
+                <input class="subscription-email-input" type="email" name="subscription-email" placeholder="Ваш e-mail"
+                  required>
                 <span class="visually-hidden"> Email </span>
               </label>
               <button class="button subscription-submit-button" type="submit">Подписаться</button>
@@ -264,15 +504,17 @@
 
     <footer class="page-footer">
       <div class="page-footer-container">
-        <img class="footer-logo" src="/images/footer-logo.svg" width="145" height="36"
-          alt="Логотип интернет-магазина «Девайс»">
+        <a class="logo-link" href="#">
+          <img class="footer-logo" src="/images/footer-logo.svg" width="145" height="36"
+            alt="Логотип интернет-магазина «Девайс»">
+        </a>
         <div class="footer-info">
           <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-          <ul class="footer-info-list">
-            <li class="footer-info-item">Доставка</li>
-            <li class="footer-info-item">Гарантия</li>
-            <li class="footer-info-item">Контакты</li>
-          </ul>
+          <div class="footer-info-list">
+            <a class="footer-info-item" href="#">Доставка</a>
+            <a class="footer-info-item" href="#">Гарантия</a>
+            <a class="footer-info-item" href="#">Контакты</a>
+          </div>
           <a class="footer-contacts-phone" href="tel:+78128121212">Тел +7 (812) 812-12-12</a>
         </div>
         <div class="footer-social">
@@ -282,7 +524,7 @@
                 <span class="visually-hidden">Телеграм</span>
                 <svg aria-hidden="true" focusable="false" width="40" height="40" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20" cy="20" r="20" fill="#fff" fill-opacity=".3" />
+                  <circle class="social-link-circle" cx="20" cy="20" r="20" fill="currentColor" />
                   <path
                     d="m25.44 14.07-11.82 4.56c-.8.33-.8.78-.14.98l3.03.94 7.02-4.43c.33-.2.64-.09.39.13l-5.7 5.13-.2 3.13c.3 0 .44-.14.61-.3l1.48-1.44 3.06 2.27c.57.31.97.15 1.12-.53l2-9.48c.21-.83-.3-1.2-.85-.96Z" />
                 </svg>
@@ -293,7 +535,7 @@
                 <span class="visually-hidden">Ютуб</span>
                 <svg aria-hidden="true" focusable="false" width="40" height="40" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20" cy="20" r="20" fill="#fff" fill-opacity=".3" />
+                  <circle class="social-link-circle" cx="20" cy="20" r="20" fill="currentColor" />
                   <g clip-path="url(#a)">
                     <path
                       d="M27.67 16.67a1.97 1.97 0 0 0-1.41-1.34C25.01 15 20 15 20 15a51.1 51.1 0 0 0-6.26.32 1.96 1.96 0 0 0-1.41 1.35 19.4 19.4 0 0 0-.33 3.67c0 1.22.1 2.45.33 3.66.09.32.27.61.51.85.25.23.56.4.9.5 1.27.32 6.26.32 6.26.32 2.09.02 4.18-.08 6.26-.31.34-.09.65-.26.9-.5.24-.23.42-.52.5-.84.24-1.21.35-2.44.34-3.67.02-1.23-.1-2.46-.33-3.68Zm-9.27 5.95v-4.57l4.18 2.29-4.18 2.28Z" />
@@ -311,7 +553,7 @@
                 <span class="visually-hidden">Твиттер</span>
                 <svg aria-hidden="true" focusable="false" width="40" height="40" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20" cy="20" r="20" fill="#fff" fill-opacity=".3" />
+                  <circle class="social-link-circle" cx="20" cy="20" r="20" fill="currentColor" />
                   <path
                     d="M22.7 13.16c1.5-.5 2.6.3 3.2 1.1.5-.2 1.1-.4 1.7-.6 0 .8-.5 1.4-.8 1.6.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4c-.3 0-3.7-.4-4.3-1.8 2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2-1.1-.8-2.3-1.5-2.2-3.5.3.3.9.5 1.2.4-.6-.2-1.8-3.1-.8-4.6 1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z"
                     fill="currentColor" />
@@ -319,15 +561,76 @@
               </a>
             </li>
           </ul>
-          <svg class="htmlacademy" aria-hidden="true" focusable="false" width="115" height="33" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M0 12.9v2.6h2.5v-2.6H0Zm11.6-8.4c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9Zm15 .3h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2Zm14.5-.2c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3Zm6.7 8.1c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7Zm-18.9 7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22Zm10.9-2.3c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6Zm17.2-7.3c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm13.2-9.2c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6Zm19.9-1.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm11.2 9.1-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"
-              fill="currentColor" />
-          </svg>
+          <a class="htmlacademy-link" href="#">
+            <span class="visually-hidden">HTMLAcademy</span>
+            <svg class="htmlacademy" aria-hidden="true" focusable="false" width="115" height="33" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0 12.9v2.6h2.5v-2.6H0Zm11.6-8.4c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9Zm15 .3h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2Zm14.5-.2c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3Zm6.7 8.1c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7Zm-18.9 7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22Zm10.9-2.3c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6Zm17.2-7.3c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm13.2-9.2c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6Zm19.9-1.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm11.2 9.1-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"
+                fill="currentColor" />
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-delivery">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="customer-data">
+              <label class="data-label customer-name">
+                <span class="customer-title">Ваше имя:</span>
+                <input class="data-input customer-data-input customer-name-input" type="text" placeholder="Введите имя"
+                  name="customer-name" required>
+                <span class="customer-add">Добавьте имя</span>
+              </label>
+              <label class="data-label customer-email">
+                <span class="customer-title">Ваш e-mail:</span>
+                <input class="data-input customer-data-input customer-email-input validation-error" type="text"
+                  placeholder="Введите почту" name="customer-email" value="почта" required>
+                <span class="customer-add">Забавный у вас адрес</span>
+              </label>
+            </div>
+            <div class="order-data">
+              <label class="data-label order-item">
+                <span class="order-title">Что нужно привезти:</span>
+                <input class="data-input order-item-input" type="text" placeholder="В свободной форме" name="order"
+                  required>
+              </label>
+              <label class="data-label order-count">
+                <div class="order-count-wrapper">
+                  <span class="order-title">Количество:</span>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg class="tooltip-icon" width="2" height="12" viewbox="0 0 2 12" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 0H0V2H2V0Z" fill="black" />
+                        <path d="M2 4H0V12H2V4Z" fill="black" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно.
+                      Привезём сколько получится по требованиям
+                      к провозу багажа.</span>
+                  </span>
+                </div>
+                <div class="order-count-group">
+                  <input class="data-input-sign" type="button" value="–" id="button_minus">
+                  <input class="data-input order-count-input" type="number" step="1" min="1" max="10" value="1"
+                    name="order-count">
+                  <input class="data-input-sign" type="button" value="+" id="button_plus">
+                </div>
+              </label>
+            </div>
+            <button class="crossed-button modal-delivery-submit-button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>
